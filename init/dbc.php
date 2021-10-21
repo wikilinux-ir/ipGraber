@@ -1,6 +1,6 @@
 <?php
 
-list($host, $dbname, $username, $password) = ["127.0.0.1", "ipgrab", "root", "nu11device"];
+list($host, $dbname, $username, $password) = ["127.0.0.1", "ipgrab", "", ""];
 
 try {
 
