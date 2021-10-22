@@ -70,9 +70,13 @@
 	for get a new link refresh this page</p>
 	</div>
 	<form action="<?=$_SERVER['PHP_SELF'];?>">
+	<?php if (!isset($_GET['requestId'])): ?>
 	<input id="url"type="text" value="<?=DOMAIN . "ip-graber/index.php?requestId={$a->getToken()}";?>">
 	<!-- <button id="btn">Copy link</button><br> -->
 	<a href="<?=DOMAIN . "ip-graber/result.php?resultId={$a->getToken()}"?>">Get Result</a>
+	<?php else: ?>
+		<a href="<?=$_SERVER['PHP_SELF'];?>">Get ipGrab link</a>
+		<?php endif?>
 	</form>
 
 	<script>

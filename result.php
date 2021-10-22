@@ -2,15 +2,16 @@
 
 include "init/autoload.php";
 
-if (!isset($_GET['resultId'])) {
+$uri = $_GET['resultId'];
+
+if (!isset($uri)) {
 
     header("location: " . DOMAIN . "ip-graber/index.php");
 } else {
-    $information = new getInformation($_GET['resultId']);
+    $information = new getInformation($uri);
     $result = $information->getData();
 
 }
-
-// echo $a->ipaddr . " " . $a->visit_at . " " . $a->create_at;
+new getRequesterUser($_SERVER, 'users', $uri);
 
 include "template/result.php";

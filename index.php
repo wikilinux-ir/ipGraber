@@ -2,7 +2,9 @@
 
 include "init/autoload.php";
 // var_dump($_SERVER);
+
 if (isset($_GET['requestId'])) {
+    $uri = null;
     $tok = $_GET['requestId'];
 
 }
@@ -12,9 +14,12 @@ if (isset($tok)) {
     new setInformation($tok, $ipAddr, $userAgent, $userLanguage);
 }
 
-// $a = new createToken();
-// echo $a->getToken();
-// var_dump($a);
-$a = new registerTokenInDb();
+if (!isset($_GET['requestId'])) {
+    $a = new registerTokenInDb();
+    $uri = $a->getToken();
+
+}
+
+$userData = new getRequesterUser($_SERVER, 'users', $uri);
 
 include "template/index.php";
