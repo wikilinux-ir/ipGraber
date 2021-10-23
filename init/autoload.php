@@ -5,7 +5,7 @@ include "consts.php";
 function auto($className)
 {
 
-    $fileName = "/srv/train/ip-graber/app/$className.php";
+    $fileName = PATH . "app/$className.php";
     if (file_exists($fileName)) {
         include $fileName;
     }

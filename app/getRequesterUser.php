@@ -3,7 +3,7 @@
 class getRequesterUser
 {
 
-    public function __construct($information, $table, $tokenID = null)
+    public function __construct($information, $table, $tokenID)
     {
         global $connection;
 

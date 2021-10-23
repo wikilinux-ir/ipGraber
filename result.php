@@ -8,6 +8,7 @@ if (!isset($uri)) {
 
     header("location: " . DOMAIN . "ip-graber/index.php");
 } else {
+
     $information = new getInformation($uri);
     $result = $information->getData();
 
