@@ -12,3 +12,5 @@ function auto($className)
 
 }
 spl_autoload_register('auto');
+
+include PATH . "vendor/autoload.php";

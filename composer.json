@@ -1,0 +1,20 @@
+{
+    "name": "wikilinux-ir/ip-graber",
+    "type": "project",
+    "license": "GNU",
+    "autoload": {
+        "psr-4": {
+            "WikilinuxIr\\IpGraber\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "wikilinux-ir",
+            "email": "wikilinux.ir@gmail.com"
+        }
+    ],
+    "minimum-stability": "beta",
+    "require": {
+        "hekmatinasser/verta": "^1.12"
+    }
+}

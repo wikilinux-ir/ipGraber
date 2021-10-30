@@ -51,7 +51,7 @@
     <?php if ($result->veiw == 0): ?>
         <h4>User not visit your link!!</h4>
     <?php else: ?>
-        <tr><td class="green">visit at :</td><td><?=$result->visit_at?></td></tr>
+        <tr><td class="green">visit at :</td><td><?=$result->visit_at?> | <?=?> </td></tr>
         <tr><td class="green">ip address :</td><td><abbr title="click to show whois"><a target="_blank" href="<?="https://who.is/whois-ip/ip-address/" . $result->ipaddr?>"><?=$result->ipaddr?></a></abbr></td></tr>
         <tr><td class="green">user Agent :</td><td><?=$result->user_agent?></td></tr>
         <tr><td class="green">user language :</td><td><?=$result->user_language?></td></tr>
